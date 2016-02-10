@@ -194,8 +194,8 @@ tmr.alarm(0, duration, 1, toggleLED)`);
         },
         onClickReadVdd33: function(evt) {
             console.log("got onClickReadVdd33. evt:", evt);
-            this.send(`v = adc.readvdd33() / 1000
-print(v)
+            this.send(`v = adc.readvdd33()
+print(v/1000 .. "." .. string.format("%3d", v%1000))
 v=nil`);
         },
         onClickListAps: function(evt) {
